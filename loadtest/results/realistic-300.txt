@@ -1,0 +1,14 @@
+
+Participants: 300 concurrent, finished: 300, failed: 0
+Duration: 81.4s, requests: 17536, throughput: 215 req/s
+
+endpoint                count   avg ms     p50     p95     p99     max
+GET meta                  300   1954.6  1993.0  3136.5  3246.0  3264.7
+POST start                300   1380.2  1288.8  2659.1  2865.7  3009.3
+PUT answer              15490    319.6   189.3   863.3  1445.9  2876.9
+GET state (reload)        546    299.2   172.9   802.7   897.9   915.0
+POST finish stage         600    313.8   230.6   934.2  1104.6  1195.5
+POST start stage          300    442.3   355.9   953.0  1081.7  1166.9
+
+Errors: none
+Integrity check: 13494 answers in 300 attempts, mismatches: 0
