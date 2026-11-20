@@ -1,0 +1,171 @@
+.done-card {
+  width: 100%;
+  max-width: 560px;
+  padding: 36px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.done-card h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.done-sub {
+  margin-top: 8px;
+}
+
+.done-burst {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+}
+
+.spark {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--grad);
+  box-shadow: 0 0 12px rgba(10, 22, 240, 0.9);
+}
+
+.spark:nth-child(3n) {
+  background: #16a34a;
+}
+
+.spark:nth-child(4n) {
+  background: #0a16f0;
+}
+
+.score-box {
+  width: 100%;
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--grad-soft);
+  border: 1px solid rgba(10, 22, 240, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.score-main span {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.score-main small {
+  color: var(--text-2);
+  font-size: 1.1rem;
+  margin-left: 6px;
+}
+
+.score-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.score-stages {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.score-stages > div {
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.036);
+}
+
+.score-stages strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.score-stages span {
+  font-size: 0.8rem;
+  color: var(--text-2);
+}
+
+.done-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-list {
+  width: 100%;
+  text-align: left;
+  display: grid;
+  gap: 10px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.review-item {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.032);
+  border: 1px solid var(--border);
+}
+
+.review-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.review-q {
+  font-weight: 700;
+  margin-bottom: 8px;
+  white-space: pre-line;
+}
+
+.review-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.review-item li {
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.review-item li.correct {
+  background: rgba(22, 163, 74, 0.14);
+  color: #15803d;
+}
+
+.review-item li.wrong {
+  background: rgba(220, 38, 38, 0.14);
+  color: #b91c1c;
+}
+
+@media (max-width: 520px) {
+  .score-stages {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modest theme: no burst animation */
+.done-burst .spark {
+  display: none;
+}
+
+.done-card .success-orb {
+  background: var(--success);
+  box-shadow: none;
+}
