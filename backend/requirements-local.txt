@@ -1,0 +1,6 @@
+# Lokal ishga tushirish uchun (SQLite, Docker/PostgreSQL/Redis/Celery shart emas)
+Django==5.2.8
+djangorestframework==3.16.1
+openpyxl==3.1.5
+whitenoise==6.9.0
+python-docx==1.2.0
